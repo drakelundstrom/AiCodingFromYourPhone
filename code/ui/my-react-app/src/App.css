@@ -145,6 +145,108 @@ h1 {
   background: linear-gradient(150deg, #fffef4 0%, #fff 60%, #f4fcff 100%);
 }
 
+.kanban-panel {
+  background: linear-gradient(150deg, #fff7f0 0%, #fff 56%, #eef9ff 100%);
+}
+
+.kanban-form {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 0.8rem;
+  align-items: end;
+}
+
+.kanban-form label {
+  display: grid;
+  gap: 0.35rem;
+  color: #23104d;
+  font-weight: 700;
+}
+
+.kanban-form input {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(44, 20, 100, 0.24);
+  padding: 0.62rem 0.7rem;
+  font: inherit;
+  color: #241146;
+  background: #fff;
+}
+
+.kanban-form input:focus {
+  outline: 2px solid rgba(35, 16, 77, 0.25);
+  border-color: rgba(35, 16, 77, 0.45);
+}
+
+.kanban-grid {
+  margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.kanban-column {
+  border: 1px solid rgba(44, 20, 100, 0.16);
+  border-radius: 14px;
+  background: #fff;
+  padding: 0.8rem;
+}
+
+.kanban-column h2 {
+  margin: 0;
+  color: #251049;
+  font-size: 1rem;
+}
+
+.kanban-column ul {
+  list-style: none;
+  margin: 0.8rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.kanban-card {
+  border-radius: 12px;
+  border: 1px solid rgba(44, 20, 100, 0.22);
+  background: linear-gradient(160deg, #fff7cd 0%, #fff 100%);
+  padding: 0.72rem;
+}
+
+.kanban-card h3 {
+  margin: 0;
+  color: #241146;
+  font-size: 0.98rem;
+}
+
+.kanban-card p {
+  margin: 0.35rem 0 0;
+  color: #372e48;
+}
+
+.kanban-controls {
+  display: flex;
+  gap: 0.45rem;
+  margin-top: 0.65rem;
+}
+
+.kanban-controls button {
+  border: 1px solid rgba(44, 20, 100, 0.3);
+  border-radius: 999px;
+  background: #fff;
+  color: #241146;
+  font: inherit;
+  font-weight: 700;
+  padding: 0.34rem 0.72rem;
+  cursor: pointer;
+}
+
+.kanban-controls button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
 .parking-form {
   margin-top: 1.2rem;
   display: grid;
@@ -274,6 +376,14 @@ h1 {
   }
 
   .parking-form {
+    grid-template-columns: 1fr;
+  }
+
+  .kanban-form {
+    grid-template-columns: 1fr;
+  }
+
+  .kanban-grid {
     grid-template-columns: 1fr;
   }
 }
