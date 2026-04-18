@@ -141,6 +141,99 @@ h1 {
   border: 1px dashed rgba(44, 20, 100, 0.3);
 }
 
+.parking-panel {
+  background: linear-gradient(150deg, #fffef4 0%, #fff 60%, #f4fcff 100%);
+}
+
+.parking-form {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.parking-form label {
+  display: grid;
+  gap: 0.35rem;
+  color: #23104d;
+  font-weight: 700;
+}
+
+.parking-form input,
+.parking-form textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(44, 20, 100, 0.24);
+  padding: 0.62rem 0.7rem;
+  font: inherit;
+  color: #241146;
+  background: #fff;
+}
+
+.parking-form input:focus,
+.parking-form textarea:focus {
+  outline: 2px solid rgba(35, 16, 77, 0.25);
+  border-color: rgba(35, 16, 77, 0.45);
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.save-button {
+  justify-self: start;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.62rem 1rem;
+  font: inherit;
+  font-weight: 700;
+  color: #fff;
+  background: #2c1464;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background: #3a1c84;
+}
+
+.reminder-list {
+  margin-top: 1.4rem;
+}
+
+.reminder-list h2 {
+  margin: 0;
+  color: #251049;
+}
+
+.reminder-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.9rem 0 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.reminder-list li {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid rgba(44, 20, 100, 0.18);
+  padding: 0.75rem 0.85rem;
+}
+
+.reminder-list p {
+  margin: 0;
+  color: #372e48;
+}
+
+.reminder-list p + p {
+  margin-top: 0.3rem;
+}
+
+.empty-state {
+  margin-top: 0.8rem;
+  color: #5b5070;
+}
+
 .page-enter {
   animation: pop-in 420ms ease both;
 }
@@ -177,6 +270,10 @@ h1 {
   }
 
   .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .parking-form {
     grid-template-columns: 1fr;
   }
 }
