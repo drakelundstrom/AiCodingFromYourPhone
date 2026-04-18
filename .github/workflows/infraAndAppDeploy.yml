@@ -95,6 +95,5 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ env.SWA_TOKEN }}
           action: upload
-          app_location: .
-          output_location: website
+          app_location: website
           skip_app_build: true
