@@ -1,6 +1,7 @@
 import { Navigate, NavLink, Route, Routes } from 'react-router-dom'
 import './App.css'
 import BuildFlowPage from './pages/BuildFlowPage'
+import GoatSimulatorPage from './pages/GoatSimulatorPage'
 import HomePage from './pages/HomePage'
 import KanbanPage from './pages/KanbanPage'
 import ParkingReminderPage from './pages/ParkingReminderPage'
@@ -19,6 +20,7 @@ function App() {
           <NavLink to="/tips">Prompt Tips</NavLink>
           <NavLink to="/parking">Parking Reminder</NavLink>
           <NavLink to="/kanban">Kanban</NavLink>
+          <NavLink to="/goat">Goat Simulator</NavLink>
         </nav>
       </header>
 
@@ -29,6 +31,7 @@ function App() {
           <Route path="/tips" element={<PhoneTipsPage />} />
           <Route path="/parking" element={<ParkingReminderPage />} />
           <Route path="/kanban" element={<KanbanPage />} />
+          <Route path="/goat" element={<GoatSimulatorPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

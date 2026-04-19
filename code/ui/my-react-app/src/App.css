@@ -247,6 +247,227 @@ h1 {
   cursor: not-allowed;
 }
 
+.goat-game {
+  border-radius: 18px;
+  padding: 1.2rem;
+  border: 1px solid rgba(31, 86, 44, 0.18);
+  background:
+    linear-gradient(180deg, rgba(255, 253, 222, 0.9), rgba(232, 249, 225, 0.92)),
+    #f4ffe9;
+}
+
+.goat-game-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.goat-game-header h1 {
+  margin-bottom: 0;
+}
+
+.restart-button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.58rem 0.95rem;
+  font: inherit;
+  font-weight: 800;
+  color: #fff;
+  background: #245d35;
+  cursor: pointer;
+}
+
+.restart-button:hover {
+  background: #327a47;
+}
+
+.game-hud {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.goat-stat {
+  position: relative;
+  min-height: 76px;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid rgba(30, 88, 45, 0.18);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0.58rem 0.68rem;
+}
+
+.goat-stat span,
+.mission-strip span,
+.mission-strip small {
+  display: block;
+  color: #45523b;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.goat-stat strong {
+  display: block;
+  margin-top: 0.12rem;
+  color: #143f25;
+  font-family: var(--heading);
+  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+  line-height: 1;
+}
+
+.meter-stat i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 7px;
+  border-radius: 0 999px 999px 0;
+  background: linear-gradient(90deg, #60b86d, #ffd65e);
+  transition: width 0.18s ease;
+}
+
+.mission-strip {
+  margin-top: 0.75rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 0.9rem;
+  border-radius: 8px;
+  border: 1px solid rgba(116, 71, 28, 0.22);
+  background: #fff5d7;
+  padding: 0.72rem 0.85rem;
+}
+
+.mission-strip strong {
+  color: #673a16;
+  font-family: var(--heading);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.mission-strip small {
+  color: #8c4d1d;
+}
+
+.goat-stage {
+  position: relative;
+  margin-top: 1rem;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 2px solid rgba(34, 80, 40, 0.32);
+  background: #84c86a;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.46);
+}
+
+.goat-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  outline: none;
+}
+
+.goat-canvas:focus {
+  box-shadow: inset 0 0 0 4px rgba(255, 246, 168, 0.9);
+}
+
+.goat-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 0.8rem;
+  background: rgba(23, 57, 29, 0.34);
+  text-align: center;
+}
+
+.goat-overlay p {
+  margin: 0;
+  color: #fff9df;
+  font-family: var(--heading);
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 800;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.34);
+}
+
+.goat-overlay button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.75rem 1.15rem;
+  font: inherit;
+  font-weight: 800;
+  color: #1c4023;
+  background: #fff6a8;
+  cursor: pointer;
+  box-shadow: 0 12px 28px rgba(31, 58, 23, 0.24);
+}
+
+.goat-overlay button:hover {
+  transform: translateY(-1px);
+}
+
+.goat-controls {
+  margin-top: 0.95rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  touch-action: none;
+}
+
+.goat-pad,
+.goat-actions {
+  display: grid;
+  gap: 0.42rem;
+}
+
+.goat-pad {
+  grid-template-columns: repeat(3, 3.15rem);
+}
+
+.goat-actions {
+  grid-template-columns: repeat(5, 3.15rem);
+  align-content: end;
+}
+
+.goat-pad button,
+.goat-actions button {
+  aspect-ratio: 1;
+  border: 1px solid rgba(35, 92, 49, 0.28);
+  border-radius: 12px;
+  background: #fff;
+  color: #183f27;
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 4px 0 rgba(35, 92, 49, 0.18);
+}
+
+.goat-pad button:active,
+.goat-actions button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 rgba(35, 92, 49, 0.18);
+}
+
+.goat-pad button:first-child {
+  grid-column: 2;
+}
+
+.goat-pad button:nth-child(2) {
+  grid-column: 1;
+}
+
+.goat-pad button:nth-child(3) {
+  grid-column: 2;
+}
+
+.goat-pad button:nth-child(4) {
+  grid-column: 3;
+}
+
 .parking-form {
   margin-top: 1.2rem;
   display: grid;
@@ -385,5 +606,30 @@ h1 {
 
   .kanban-grid {
     grid-template-columns: 1fr;
+  }
+
+  .game-hud {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mission-strip {
+    grid-template-columns: 1fr auto;
+  }
+
+  .mission-strip small {
+    display: none;
+  }
+
+  .goat-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .goat-pad {
+    justify-content: start;
+  }
+
+  .goat-actions {
+    grid-template-columns: repeat(5, minmax(2.5rem, 1fr));
   }
 }
